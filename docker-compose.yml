@@ -1,0 +1,9 @@
+services:
+  rag-api:
+    build: .
+    container_name: rag-chatbot-huggingface-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./vectorstore:/app/vectorstore
